@@ -38,8 +38,8 @@
     
     //[self layoutSquares];
     //[self layoutHorizontalRectangles];
-    [self layoutVerticalRectangles];
-    //[self layoutDiagonalSquares];
+    //[self layoutVerticalRectangles];
+    [self layoutDiagonalSquares];
     
 }
 
@@ -87,6 +87,13 @@
 }
 -(void)layoutDiagonalSquares
 {
+    CGFloat rectWidth = self.view.frame.size.width/4;
+    CGFloat rectHeight = self.view.frame.size.height/4;
+    
+    self.redView.frame = CGRectMake(0, 0, rectWidth, rectHeight);
+    self.blueView.frame = CGRectMake(rectWidth, rectHeight, rectWidth, rectHeight);
+    self.greenView.frame = CGRectMake(rectWidth*2, rectHeight*2, rectWidth, rectHeight);
+    self.yellowView.frame = CGRectMake(rectWidth*3, rectHeight*3, rectWidth, rectHeight);
     
 }
 
